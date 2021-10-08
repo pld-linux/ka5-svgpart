@@ -1,16 +1,16 @@
-%define		kdeappsver	21.08.1
+%define		kdeappsver	21.08.2
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		svgpart
 Summary:	svgpart
 Summary(pl.UTF-8):	svgpart
 Name:		ka5-%{kaname}
-Version:	21.08.1
+Version:	21.08.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ebcc1c0de1531e94e235264d079f58c2
+# Source0-md5:	0763626a9198e56247f968bba3fbc518
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Gui-devel >= 5.11.1
 BuildRequires:	Qt5Svg-devel
