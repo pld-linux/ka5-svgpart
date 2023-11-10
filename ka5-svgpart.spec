@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.2
+%define		kdeappsver	23.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		svgpart
 Summary:	svgpart
 Summary(pl.UTF-8):	svgpart
 Name:		ka5-%{kaname}
-Version:	23.08.2
+Version:	23.08.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d2758b993d5b6863956dc75a0bf4d0e3
+# Source0-md5:	13e715d65c5dbec6151dda71e52f490b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Gui-devel >= 5.11.1
 BuildRequires:	Qt5Svg-devel
