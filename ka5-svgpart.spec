@@ -1,29 +1,30 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	24.01.95
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		svgpart
 Summary:	svgpart
 Summary(pl.UTF-8):	svgpart
 Name:		ka5-%{kaname}
-Version:	23.08.4
-Release:	1
+Version:	24.01.95
+Release:	0.1
 License:	GPL v2+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	40f191a6c6593b34c26c28e7f90356ab
+Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	58126104c5ceebc91123ddc84ce6874e
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Gui-devel >= 5.11.1
-BuildRequires:	Qt5Svg-devel
-BuildRequires:	Qt5Widgets-devel
+BuildRequires:	Qt6Gui-devel >= 5.11.1
+BuildRequires:	Qt6Svg-devel
+BuildRequires:	Qt6Widgets-devel
 BuildRequires:	gettext-devel
-BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf5-kcoreaddons-devel >= %{kframever}
-BuildRequires:	kf5-kparts-devel >= %{kframever}
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
+BuildRequires:	kf6-kparts-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= 5.5.0
+BuildRequires:	python3
+BuildRequires:	qt6-build >= 5.5.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,6 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/parts/svgpart.so
-%{_datadir}/kservices5/svgpart.desktop
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/svgpart.so
 %{_datadir}/metainfo/org.kde.svgpart.metainfo.xml
